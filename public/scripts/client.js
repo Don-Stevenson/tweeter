@@ -1,6 +1,6 @@
 /* Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
-
+// user database
   const data = [
     {
     "user": {
@@ -25,7 +25,7 @@
     }
   ]
 
-  
+  // function that creates the tweet
   const createTweetElement = function(tweet) {
     let $tweet = $('<article>').addClass('tweet');
     const htmlCode = `
@@ -50,7 +50,7 @@
     $tweet.append(htmlCode);
     return $tweet;
   }
-  
+  // function that renders the tweets on the page
   const renderTweets = function(tweets) {
     for (let tweet of tweets){
       $('#tweets-container').append(createTweetElement(tweet));
@@ -59,4 +59,11 @@
   
   $(document).ready(function() {
     renderTweets(data);
+
+  //handling the submit function
+  $("#submit").submit(function(event) {
+    event.preventDefault();    
+    console.log($(this).find("textarea").serialize());   
+  });    
+
   });

@@ -7,7 +7,7 @@ input {
   padding-left: 10px;
   padding-right: 10px;
 }
-
+/* make more specific newtweet textbox for example. */
 textarea {
   width: 100%;
   resize: none;
@@ -20,7 +20,7 @@ textarea {
   background-color: transparent;
 }
 
-.counter {
+#counter {
   float: right;
 }
 

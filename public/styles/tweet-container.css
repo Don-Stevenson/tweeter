@@ -10,6 +10,8 @@ article.tweet>header {
 
 article.tweet>header.tweet-pictures {
   float: left;
+  /* fix text to right of picture*/
+
 }
 
 article.tweet>header>p>span {
@@ -33,7 +35,7 @@ article.tweet>footer>div {
   display: inline-block;
 }
 
-article.tweet>footer>div.footer-icons{
+article.tweet>footer>div.footer-icons {
   float: right;
   margin: 1.05em 2em
 }
