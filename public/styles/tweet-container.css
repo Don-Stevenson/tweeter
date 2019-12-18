@@ -1,11 +1,11 @@
-article {
+article.tweet {
   border: 5px solid #4c4b4b;
   margin: 1.5em 0 1.5em 0;
   opacity: 0.8;
 }
 
 article.tweet>header {
-  padding: 0 1em 1em 1em;
+  padding: 1em;
 }
 
 article.tweet>header.tweet-pictures {
