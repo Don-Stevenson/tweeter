@@ -9,13 +9,15 @@
   <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,400,700,700i&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
   <!-- App CSS -->
-  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
-  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="./styles/tweet-container.css" type="text/css" />
 
   <!-- External JS -->
   <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -25,12 +27,13 @@
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
+
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
     <span>tweeter</span>
   </nav>
-  <header>
+  <header class="top-header">
     <div>
       <img src="/images/profile-hex.png">
     </div>
@@ -39,7 +42,6 @@
       <h2>Don Stevenson</h2>
     </div>
   </header>
-
 
   <!-- Page-specific (main) content here -->
   <main class="container">
@@ -51,40 +53,46 @@
         <span class="counter">140</span>
       </form>
     </section>
-    <br><br>
-    <p> Lorem ipsum dolor sit amet, per at harum aperiam adipisci, invidunt accusamus qui ea, ut vim blandit ponderum.
-      Nonumy epicuri no eam, veri tempor referrentur et vix. Usu ne dolor labitur. Ad nobis eleifend his, ne exerci
-      complectitur consequuntur quo.
-      <br>
-      Vel ex cotidieque suscipiantur, est pericula adipiscing ex. His te probo habemus delectus. Quo eu blandit
-      adolescens. Qui id principes repudiare, est natum meliore nominati ut, qui elit commodo ea. Eos ad veri option
-      constituto, mel ad ferri facilisi. Elaboraret instructior nec ut.
-      <br>
-      Omnesque copiosae officiis an pri. Pro ut eleifend efficiantur, ad primis molestiae </p>
-    <br>
-    <p>
-      Lorem ipsum dolor sit amet, per at harum aperiam adipisci, invidunt accusamus qui ea, ut vim blandit ponderum.
-      Nonumy epicuri no eam, veri tempor referrentur et vix. Usu ne dolor labitur. Ad nobis eleifend his, ne exerci
-      complectitur consequuntur quo.
-      <br>
-      Vel ex cotidieque suscipiantur, est pericula adipiscing ex. His te probo habemus delectus. Quo eu blandit
-      adolescens. Qui id principes repudiare, est natum meliore nominati ut, qui elit commodo ea. Eos ad veri option
-      constituto, mel ad ferri facilisi. Elaboraret instructior nec ut.
-      <br>
-      Omnesque copiosae officiis an pri. Pro ut eleifend efficiantur, ad primis molestiae maiestatis ius. Veniam alterum
-      inciderint ad eum, at per brute laboramus intellegam. Sea erant voluptatibus eu. Ex nec sint forensibus
-      intellegebat, pro facer ocurreret te. An eos errem primis melius, vel eu tacimates qualisque abhorreant, in alii
-      facilisis similique nec.
-      <br>
-      Mei virtute euripidis cu, eam debet sapientem no. Eum no vero quaeque delicatissimi. Quot partem mei ad, utroque
-      scaevola dignissim qui in. Mea cu veri vidisse integre. Falli suscipit ne eos, pri exerci blandit no. Sit alia
-      nominati cu.
-      <br>
-      His maluisset dissentiunt no. Ne vis elitr epicurei probatus, in soleat voluptatibus vim, qui cu audiam
-      constituto.
-      Sed ei nisl verear lucilius, civibus luptatum tacimates eu qui. Per graece ponderum ne, mel no iudico deleniti
-      dissentiet, vel cu choro aliquip.<br>
-    </p>
+
+    <section>
+      <article class="tweet">
+        <header>
+          <p>Newton
+            <span>@SirIssac</span>
+          </p>
+        </header>
+        <p>If I have seen further it is by standing on the shoulders of giants</p>
+        <footer>
+          <div>
+            <p>10 days ago </p>
+          </div>
+          <div class="footer-icons">
+            <i class="fa fa-flag">&#160</i>
+            <i class="fa fa-retweet">&#160</i>
+            <i class="fa fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+      <article class="tweet">
+        <header>
+          <p>Elmer Lazzeri
+            <span>@Lazzeri</span>
+          </p>
+        </header>
+        <p>Wow! What a tweeterific app!</p>
+        <footer>
+          <div>
+             <p>12 days ago </p>
+          </div>
+          <div class="footer-icons">
+            <i class="fa fa-flag">&#160</i>
+            <i class="fa fa-retweet">&#160</i>
+            <i class="fa fa-heart"></i>
+          </div>
+        </footer>
+      </article>
+    </section>
+
   </main>
 </body>
 
