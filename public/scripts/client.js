@@ -64,8 +64,7 @@ $(document).ready(function () {
   //after loading the page, handling the submit function
   $("#submit").submit(function (event) {
     event.preventDefault();
-    console.log($(this).find("textarea").serialize());
-    console.log($(this).find("textarea").serialize());
+     console.log($(this).find("textarea").serialize());
     $.ajax({
       url: "/tweets/",
       dataType: "text",
