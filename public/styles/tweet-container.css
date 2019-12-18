@@ -5,7 +5,11 @@ article {
 }
 
 article.tweet>header {
-  padding: 0 1em 0 1em;
+  padding: 0 1em 1em 1em;
+}
+
+article.tweet>header.tweet-pictures {
+  float: left;
 }
 
 article.tweet>header>p>span {
