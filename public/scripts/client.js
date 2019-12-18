@@ -31,7 +31,7 @@ const createTweetElement = function (tweet) {
 // function that renders the tweets on the page
 const renderTweets = function (tweets) {
   for (let tweet of tweets) {
-    $('#tweets-container').append(createTweetElement(tweet));
+    $('#tweets-container').prepend(createTweetElement(tweet));
   }
 }
 // upon loading the the page, render the previous tweets
@@ -54,21 +54,28 @@ $(document).ready(function () {
 
   //after loading the page, handling the submit function
   $("#submit").submit(function (event) {
-    event.preventDefault();
-    console.log($(this).find("textarea").serialize());
-    $.ajax({
-      url: "/tweets/",
-      dataType: "text",
-      type: "POST",
-      contentType: "application/x-www-form-urlencoded",
-      data: $(this).find("textarea").serialize(),
-      success: function () {
-        console.log("success");
-      },
-      error: function () {
-        console.log("failed");
-      }
-    });
+    noOfChars = $(this).find("textarea").val().length;
+    if (noOfChars === 0) {
+      alert("Invalid entry. Please enter a tweet");
+      event.preventDefault()
+    } else if (noOfChars > 140) {
+      alert("Invalid entry. The maxium haracter length has been exceeded")
+      event.preventDefault();
+    } else {
+      $.ajax({
+        url: "/tweets/",
+        dataType: "text",
+        type: "POST",
+        contentType: "application/x-www-form-urlencoded",
+        data: $(this).find("textarea").serialize(),
+        success: function () {
+          console.log("success");
+        },
+        error: function () {
+          console.log("failed");
+        }
+      });
+    }
   });
 
 });
