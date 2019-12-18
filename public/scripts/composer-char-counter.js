@@ -1,4 +1,4 @@
-
+// function that counts down the remaining characters in your tweet.
 $(document).ready(() => {
   $(".new-tweet textarea").on('keyup', function () {
     const remainingChar = 140 - $(this).val().length;

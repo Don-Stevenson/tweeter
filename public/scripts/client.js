@@ -3,8 +3,8 @@
 // user database
 
 
-// escape function to prevent XSS
-const escape =  function(str) {
+// escape function to prevent XSS attacks
+const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -60,7 +60,7 @@ $(document).ready(function () {
   loadTweets();
 
   //after loading the page, handling the submit function
-  $("#submit").submit(function (event) {
+  $("#submit").submit(function(event) {
     noOfChars = $(this).find("textarea").val().length;
     if (noOfChars === 0) {
       alert("Invalid entry. Please enter a tweet");
@@ -82,6 +82,25 @@ $(document).ready(function () {
           console.log("failed");
         }
       });
+    }
+  });
+
+  // handling the toggle of the compose tweet bar
+
+  let composeToggle = true;
+  let startToggle = true;
+  $("#write-tweet").on("click", function () {
+    if (composeToggle && startToggle) {
+      $(".new-tweet").find("textarea").focus();
+      composeToggle = false;
+      startToggle = false;
+    } else if (composeToggle) {
+      $(".new-tweet").slideDown();
+      $(".new-tweet").find("textarea").focus();
+      composeToggle = false;
+    } else {
+      $(".new-tweet").slideUp();
+      composeToggle = true;
     }
   });
 
