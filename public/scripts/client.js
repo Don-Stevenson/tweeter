@@ -1,30 +1,7 @@
 /* Reminder: Use (and do all your DOM work in) jQuery's document ready function
 */
 // user database
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": "10 days ago"
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": "12 days ago"
-  }
-]
+
 
 // function that creates the tweet
 const createTweetElement = function (tweet) {
@@ -57,14 +34,28 @@ const renderTweets = function (tweets) {
     $('#tweets-container').append(createTweetElement(tweet));
   }
 }
-// upon loading the the page, render the tweets
+// upon loading the the page, render the previous tweets
 $(document).ready(function () {
-  renderTweets(data);
+  const loadTweets = function () {
+    $.ajax({
+      url: "/tweets",
+      dataType: "json",
+      type: "GET",
+      success: function (tweetDB) {
+        console.log(tweetDB);
+        renderTweets(tweetDB);
+      },
+      error: function () {
+        console.log("failed");
+      }
+    });
+  }
+  loadTweets();
 
   //after loading the page, handling the submit function
   $("#submit").submit(function (event) {
     event.preventDefault();
-     console.log($(this).find("textarea").serialize());
+    console.log($(this).find("textarea").serialize());
     $.ajax({
       url: "/tweets/",
       dataType: "text",
