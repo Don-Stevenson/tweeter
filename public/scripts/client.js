@@ -3,6 +3,13 @@
 // user database
 
 
+// escape function to prevent XSS
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 // function that creates the tweet
 const createTweetElement = function (tweet) {
   let $tweet = $('<article>').addClass('tweet');
@@ -14,7 +21,7 @@ const createTweetElement = function (tweet) {
         <span>${tweet.user.handle}</span>
       </p>                     
     </header>
-    <p>${tweet.content.text}</p>
+    <p>${escape(tweet.content.text)}</p>
     <footer>
       <p>${tweet.created_at}
         <span>                

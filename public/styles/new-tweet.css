@@ -1,4 +1,4 @@
-input {
+#submit input {
   color: #FFFFFF;
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
@@ -7,8 +7,8 @@ input {
   padding-left: 10px;
   padding-right: 10px;
 }
-/* make more specific newtweet textbox for example. */
-textarea {
+
+#submit textarea {
   width: 100%;
   resize: none;
   border-top-style: none;
@@ -27,3 +27,4 @@ textarea {
 .changeCounterColor {
   color: red;
 }
+

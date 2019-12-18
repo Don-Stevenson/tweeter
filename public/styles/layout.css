@@ -23,6 +23,8 @@ body {
   font-size: 24px;
 }
 
+
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -34,3 +36,12 @@ main {
   margin: 0 auto;
   word-wrap: break-word;
 }
+
+#write-tweet {
+  float: right;
+  height: 65;
+  font-weight: 700;
+  background-color: transparent;
+  margin: .4em 0em ;
+}
+

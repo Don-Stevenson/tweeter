@@ -9,6 +9,8 @@ nav {
   padding: 1.5em;
 }
 
-nav > span {
-    font-family: 'Bungee', sans-serif;
+
+#write-tweet {
+  font-family: sans-serif;
+  float: right
 }

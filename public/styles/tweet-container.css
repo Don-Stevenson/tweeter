@@ -37,11 +37,12 @@ article.tweet>footer>div {
 
 article.tweet>footer>div.footer-icons {
   float: right;
-  margin: 1.05em 2em
+  margin: 1.05em 2em;
 }
 
 article.tweet>footer>p>span {
   float: right;
+  visibility: hidden;
 }
 
 article:hover {
@@ -50,5 +51,8 @@ article:hover {
 }
 
 article:hover header>p>span {
+  visibility: visible;
+}
+article:hover footer>p>span {
   visibility: visible;
 }
