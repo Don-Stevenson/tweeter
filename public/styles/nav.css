@@ -11,5 +11,6 @@ nav {
 
 #write-tweet {
   font-family: sans-serif;
-  float: right
+  float: right;
+  padding: 0 1em 0 0
 }
