@@ -61,16 +61,19 @@ $(document).ready(function () {
       }
     });
   }
+  $("#error").hide();
   loadTweets();
 
   //after loading the page, handling the submit function
   $("#submit").submit(function (event) {
     noOfChars = $(this).find("textarea").val().length;
     if (noOfChars === 0) {
-      alert("Invalid entry. Please enter a tweet");
+      $("#error").text("Invalid entry: Please enter your text into the the tweet box");
+      $("#error").slideDown();
       event.preventDefault()
     } else if (noOfChars > 140) {
-      alert("Invalid entry. The maxium haracter length has been exceeded")
+      $("#error").text("Invalid entry: The maxium character length has been exceeded")
+      $("#error").slideDown();
       event.preventDefault();
     } else {
       $.ajax({
