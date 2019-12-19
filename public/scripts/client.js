@@ -90,22 +90,11 @@ $(document).ready(function () {
   });
 
   // handling the toggle of the compose tweet bar
-
-  let composeToggle = true;
-  let startToggle = true;
   $("#write-tweet").on("click", function () {
-    if (composeToggle && startToggle) {
-      $(".new-tweet").find("textarea").focus();
-      composeToggle = false;
-      startToggle = false;
-    } else if (composeToggle) {
+    if ($(".new-tweet:hidden").length) {
       $(".new-tweet").slideDown();
       $(".new-tweet").find("textarea").focus();
-      composeToggle = false;
-    } else {
-      $(".new-tweet").slideUp();
-      composeToggle = true;
-    }
-  });
+    } else $(".new-tweet").slideUp();
 
+  });
 });
