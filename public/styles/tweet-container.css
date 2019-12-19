@@ -15,8 +15,8 @@ article.tweet>header>div>img {
 
 p.tweet-username {
   padding: 1rem;
-  position: absolute;
-  left: 6rem;
+  position: relative;
+  
 }
 
 p.tweet-handle {

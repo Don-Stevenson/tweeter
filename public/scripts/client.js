@@ -87,6 +87,7 @@ $(document).ready(function () {
         data: $(this).find("textarea").serialize(),
         success: function () {
           loadTweets();
+          $("#error").slideUp();
         },
         error: function () {
           $("#error").text("Error with ajax request");
