@@ -1,6 +1,6 @@
 article.tweet {
   border: 5px solid #4c4b4b;
-  margin: 1.5em 0 1.5em 0;
+  margin: 1.5rem 0 1.5rem 0;
   opacity: 0.8;
 }
 
@@ -10,19 +10,19 @@ article.tweet>header>div {
 }
 
 article.tweet>header>div>img {
-  padding: 1em;
+  padding: 1rem;
 }
 
 p.tweet-username {
-  padding: 1em;
+  padding: 1rem;
   position: absolute;
-  left: 6em;
+  left: 6rem;
 }
 
 p.tweet-handle {
-  padding: 1em;
+  padding: 1rem;
   position: absolute;
-  right: 3em;
+  right: 3rem;
   visibility: hidden;
 }
 
@@ -34,13 +34,13 @@ article.tweet>header>p>span {
 
 article.tweet>p {
   border-bottom: 5px solid #4c4b4b;
-  padding: 1em;
-  margin: 0 1em 0 1em;
+  padding: 1rem;
+  margin: 0 1rem 0 1rem;
 }
 
 article.tweet>footer {
-  margin: 0 2em 0 2em;
-  font-size: 16px;
+  margin: 0 2rem 0 2rem;
+  font-size: 1rem;
 }
 
 article.tweet>footer>div {
@@ -49,7 +49,7 @@ article.tweet>footer>div {
 
 article.tweet>footer>div.footer-icons {
   float: right;
-  margin: 1.05em 2em;
+  margin: 1.05rem 2rem;
 }
 
 article.tweet>footer>p>span {
@@ -59,7 +59,7 @@ article.tweet>footer>p>span {
 
 article:hover {
   opacity: 1;
-  box-shadow: 5px 10px 8px rgb(154, 158, 169);
+  box-shadow: 0.31rem 0.62rem 0.5rem #8CA385;
 }
 
 article:hover header>p>span {

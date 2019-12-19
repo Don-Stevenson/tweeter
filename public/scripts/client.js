@@ -70,7 +70,7 @@ $(document).ready(function () {
   $("#submit").submit(function (event) {
     noOfChars = $(this).find("textarea").val().length;
     if (noOfChars === 0) {
-      $("#error").text("Invalid entry: Please enter your text into the the tweet box");
+      $("#error").text("Invalid entry: Please enter your text below");
       $("#error").slideDown();
       event.preventDefault()
     } else if (noOfChars > 140) {

@@ -1,16 +1,16 @@
 nav {
   position: fixed;
-  height: 7.5em;
+  height: 7.5rem;
   font-family: 'bungee', sans-serif;
   width:  100vw;
   z-index: 1;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding: 1.5em;
+  padding: 1.5rem;
 }
 
 #write-tweet {
   font-family: sans-serif;
   float: right;
-  padding: 0 1em 0 0
+  padding: 0 1rem 0 0
 }

@@ -4,8 +4,8 @@
   background-color: #4056A1;
   border: none;
   cursor: pointer;
-  padding-left: 0.62em;
-  padding-right: 0.62em;
+  padding-left: 0.62rem;
+  padding-right: 0.62rem;
 }
 
 #submit textarea {
@@ -14,7 +14,7 @@
   border-top-style: none;
   border-left-style: none;
   border-right-style: none;
-  border-bottom: 0.31em solid #4c4b4b;
+  border-bottom: 0.31rem solid #4c4b4b;
   height: 65;
   font-weight: 700;
   background-color: transparent;
@@ -31,6 +31,6 @@
 #error{
   border: 5px solid #ff0000;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5rem;
   color: red;
 }

@@ -20,7 +20,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 1.5em;
+  font-size: 1.5rem;
 }
 
 
@@ -30,7 +30,7 @@ body {
  */
 
 main {
-  padding-top: 7.5em;
+  padding-top: 7.5rem;
   width: 90%;
   background-color: #f4f1ec;
   margin: 0 auto;
@@ -42,6 +42,6 @@ main {
   height: 65;
   font-weight: 700;
   background-color: transparent;
-  margin: .4em 0em ;
+  margin: .4rem 0rem ;
 }
 
