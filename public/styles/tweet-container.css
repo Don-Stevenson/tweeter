@@ -1,3 +1,5 @@
+/* handling the tweet container styling */
+
 article.tweet {
   border: 5px solid #4c4b4b;
   margin: 1.5rem 0 1.5rem 0;
@@ -57,19 +59,19 @@ article.tweet>footer>p>span {
   visibility: hidden;
 }
 
-article:hover {
+article.tweet:hover {
   opacity: 1;
   box-shadow: 0.31rem 0.62rem 0.5rem #8CA385;
 }
 
-article:hover header>p>span {
+article.tweet:hover header>p>span {
   visibility: visible;
 }
 
-article:hover footer>p>span {
+article.tweet:hover footer>p>span {
   visibility: visible;
 }
 
-article:hover p.tweet-handle {
+article.tweet:hover p.tweet-handle {
   visibility: visible;
 }

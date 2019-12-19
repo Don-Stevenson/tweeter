@@ -23,8 +23,6 @@ body {
   font-size: 1.5rem;
 }
 
-
-
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
@@ -42,6 +40,16 @@ body {
   width: 90vw;
   margin: 0 auto;
   word-wrap: break-word;
+}
+
+#write-tweet {
+  font-family: sans-serif;
+  float: right;
+  height: 65;
+  font-weight: 700;
+  background-color: transparent;
+  margin: 0.78rem 0rem ;
+
 }
 
 /* Desktop styles */
@@ -77,12 +85,3 @@ body {
 
 }
 
-#write-tweet {
-  font-family: sans-serif;
-  float: right;
-  height: 65;
-  font-weight: 700;
-  background-color: transparent;
-  margin: 0.78rem 0rem ;
-
-}

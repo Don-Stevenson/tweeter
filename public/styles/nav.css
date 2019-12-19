@@ -1,3 +1,5 @@
+/* handling the styling of the nav */
+
 nav {
   position: fixed;
   height: 7.5rem;
@@ -10,3 +12,13 @@ nav {
 }
 
 
+
+#write-tweet {
+  font-family: sans-serif;
+  float: right;
+  height: 65;
+  font-weight: 700;
+  background-color: transparent;
+  margin: 0.78rem 1rem ;
+
+}
