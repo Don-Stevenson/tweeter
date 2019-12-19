@@ -57,7 +57,9 @@ $(document).ready(function () {
         renderTweets(tweetDB);
       },
       error: function () {
-        console.log("failed");
+        $("#error").text("Error with ajax request");
+        $("#error").slideDown();
+        event.preventDefault();
       }
     });
   }
@@ -83,10 +85,12 @@ $(document).ready(function () {
         contentType: "application/x-www-form-urlencoded",
         data: $(this).find("textarea").serialize(),
         success: function () {
-          console.log("success");
+          loadTweets();
         },
         error: function () {
-          console.log("failed");
+          $("#error").text("Error with ajax request");
+          $("#error").slideDown();
+          event.preventDefault();
         }
       });
     }
