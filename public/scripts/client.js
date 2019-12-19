@@ -15,11 +15,15 @@ const createTweetElement = function (tweet) {
   let $tweet = $('<article>').addClass('tweet');
   const htmlCode = `
     <header>
+     <div>
       <img src="${tweet.user.avatars}">         
-      <p>
-        ${tweet.user.name}
-        <span>${tweet.user.handle}</span>
-      </p>                     
+         <p class="tweet-username">
+         ${tweet.user.name}
+         </p>
+         <p class="tweet-handle">
+         ${tweet.user.handle}
+         </p>
+         </div>                   
     </header>
     <p>${escape(tweet.content.text)}</p>
     <footer>
@@ -60,7 +64,7 @@ $(document).ready(function () {
   loadTweets();
 
   //after loading the page, handling the submit function
-  $("#submit").submit(function(event) {
+  $("#submit").submit(function (event) {
     noOfChars = $(this).find("textarea").val().length;
     if (noOfChars === 0) {
       alert("Invalid entry. Please enter a tweet");

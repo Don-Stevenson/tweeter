@@ -4,14 +4,26 @@ article.tweet {
   opacity: 0.8;
 }
 
-article.tweet>header {
+article.tweet>header>div {
+  display: flex;
+  justify-content: space-end;
+}
+
+article.tweet>header>div>img {
   padding: 1em;
 }
 
-article.tweet>header.tweet-pictures {
-  float: left;
-  /* fix text to right of picture*/
+p.tweet-username {
+  padding: 1em;
+  position: absolute;
+  left: 6em;
+}
 
+p.tweet-handle {
+  padding: 1em;
+  position: absolute;
+  right: 3em;
+  visibility: hidden;
 }
 
 article.tweet>header>p>span {
@@ -53,6 +65,11 @@ article:hover {
 article:hover header>p>span {
   visibility: visible;
 }
+
 article:hover footer>p>span {
+  visibility: visible;
+}
+
+article:hover p.tweet-handle {
   visibility: visible;
 }
