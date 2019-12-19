@@ -78,6 +78,7 @@ $(document).ready(function () {
       $("#error").slideDown();
       event.preventDefault();
     } else {
+      event.preventDefault();
       $.ajax({
         url: "/tweets/",
         dataType: "text",
@@ -93,6 +94,8 @@ $(document).ready(function () {
           event.preventDefault();
         }
       });
+      $("textarea").val("");
+      $(".counter").text(140);
     }
   });
 
