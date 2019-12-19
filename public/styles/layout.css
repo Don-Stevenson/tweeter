@@ -19,7 +19,7 @@ html {
 body {
   font-family: "Source Sans Pro", sans-serif;
   color: #545149;
-  background-color: #f4f1ec;
+  background-color:#EAEEE8;
   font-size: 1.5rem;
 }
 
@@ -32,7 +32,7 @@ body {
 .container {
   padding-top: 7.5rem;
   width: 90%;
-  background-color: #f4f1ec;
+  background-color:#EAEEE8;
   margin: 0 auto;
   word-wrap: break-word;
 }
@@ -60,8 +60,7 @@ body {
   }
 
   body > nav {    
-    background-color: #5a5ab9;  
-    background-image: none;  
+   background-image: none;  
   }
 
   body > main.container {
@@ -76,12 +75,14 @@ body {
     margin-top: 0;
   }
 
+}
 
 #write-tweet {
+  font-family: sans-serif;
   float: right;
   height: 65;
   font-weight: 700;
   background-color: transparent;
-  margin: .4rem 0rem ;
-}
+  margin: 0.78rem 0rem ;
 
+}
