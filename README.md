@@ -15,8 +15,9 @@ Upon success, client will get the values back from the tweet database in the ser
 This application supports both mobile and windows view based on screen resolution.
 
 ## Final Product Screen Shots
-!["screenshot of desktop view on load"]()
-
+!["screenshot of desktop view on load"](https://github.com/Don-Stevenson/tweeter/blob/master/docs/desktopLoad.PNG)
+!["screenshot of mobile view on load"](https://github.com/Don-Stevenson/tweeter/blob/master/docs/mobile.PNG)
+!["screenshot of create tweet"](https://github.com/Don-Stevenson/tweeter/blob/master/docs/newTweet.PNG)
 
 ## Getting Started
 
