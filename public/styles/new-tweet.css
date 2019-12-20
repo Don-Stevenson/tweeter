@@ -1,5 +1,9 @@
 /* handling the new tweet styleing */
 
+.new-tweet {
+  display: none;
+}
+
 #submit input {
   color: #FFFFFF;
   font-family: 'Bungee', sans-serif;

@@ -59,6 +59,8 @@ article.tweet>footer>p>span {
   visibility: hidden;
 }
 
+/* handling the styling of the hover on tweet elements */
+
 article.tweet:hover {
   opacity: 1;
   box-shadow: 0.31rem 0.62rem 0.5rem #8CA385;

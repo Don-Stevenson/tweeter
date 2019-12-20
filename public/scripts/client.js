@@ -10,32 +10,38 @@ const escape = function (str) {
   return div.innerHTML;
 }
 
-// function that creates the tweet
+// hidding the elment on load up
+
+// //function to convert unix timestamp to date
+// (1970,1,1))*86400 
+
+
+// function that creates the tweet using html
 const createTweetElement = function (tweet) {
   let $tweet = $('<article>').addClass('tweet');
   const htmlCode = `
-    <header>
-     <div>
-      <img src="${tweet.user.avatars}">         
-         <p class="tweet-username">
-         ${tweet.user.name}
-         </p>
-         <p class="tweet-handle">
-         ${tweet.user.handle}
-         </p>
-         </div>                   
-    </header>
-    <p>${escape(tweet.content.text)}</p>
-    <footer>
-      <p>${tweet.created_at}
-        <span>                
-          <i class="fa fa-flag">&#160</i>
-          <i class="fa fa-retweet">&#160</i>
-          <i class="fa fa-heart"></i>
-        </span>
-      </p>                            
-    </footer>
-    `;
+  <header>
+  <div>
+  <img src="${tweet.user.avatars}">         
+  <p class="tweet-username">
+  ${tweet.user.name}
+  </p>
+  <p class="tweet-handle">
+  ${tweet.user.handle}
+  </p>
+  </div>                   
+  </header>
+  <p>${escape(tweet.content.text)}</p>
+  <footer>
+  <p>${tweet.created_at}
+  <span>                
+  <i class="fa fa-flag">&#160</i>
+  <i class="fa fa-retweet">&#160</i>
+  <i class="fa fa-heart"></i>
+  </span>
+  </p>                            
+  </footer>
+  `;
   $tweet.append(htmlCode);
   return $tweet;
 }
@@ -53,7 +59,6 @@ $(document).ready(function () {
       dataType: "json",
       type: "GET",
       success: function (tweetDB) {
-        console.log(tweetDB);
         renderTweets(tweetDB);
       },
       error: function () {
