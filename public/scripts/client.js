@@ -61,6 +61,7 @@ const renderTweets = (tweets) => {
     $("#tweets-container").prepend(createTweetElement(tweet));
   }
 };
+
 // upon loading the the page, render the previous tweets
 $(document).ready(() => {
   const loadTweets = () => {
