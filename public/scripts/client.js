@@ -3,7 +3,7 @@
 // user database
 
 // escape function to prevent XSS attacks
-const escape = function (str) {
+const escape = (str) => {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -30,7 +30,7 @@ formatTweetTimeStamp = (time) => {
 };
 
 // function that creates the tweet using html
-const createTweetElement = function (tweet) {
+const createTweetElement = (tweet) => {
   let $tweet = $("<article>").addClass("tweet");
   const htmlCode = `
   <header>
@@ -59,22 +59,22 @@ const createTweetElement = function (tweet) {
   return $tweet;
 };
 // function that renders the tweets on the page
-const renderTweets = function (tweets) {
+const renderTweets = (tweets) => {
   for (let tweet of tweets) {
     $("#tweets-container").prepend(createTweetElement(tweet));
   }
 };
 // upon loading the the page, render the previous tweets
-$(document).ready(function () {
-  const loadTweets = function () {
+$(document).ready(() => {
+  const loadTweets = () => {
     $.ajax({
       url: "/tweets",
       dataType: "json",
       type: "GET",
-      success: function (tweetDB) {
+      success: (tweetDB) => {
         renderTweets(tweetDB);
       },
-      error: function () {
+      error: () => {
         $("#error").text("Error with ajax request");
         $("#error").slideDown();
         event.preventDefault();
@@ -85,7 +85,7 @@ $(document).ready(function () {
   loadTweets();
 
   //after loading the page, handling the submit function
-  $("#submit").submit(function (event) {
+  $("#submit").submit((event) => {
     noOfChars = $(this).find("textarea").val().length;
     if (noOfChars === 0) {
       $("#error").text("Invalid entry: Please enter your text below");
@@ -105,11 +105,11 @@ $(document).ready(function () {
         type: "POST",
         contentType: "application/x-www-form-urlencoded",
         data: $(this).find("textarea").serialize(),
-        success: function () {
+        success: () => {
           loadTweets();
           $("#error").slideUp();
         },
-        error: function () {
+        error: () => {
           $("#error").text("Error with ajax request");
           $("#error").slideDown();
           event.preventDefault();
@@ -121,7 +121,7 @@ $(document).ready(function () {
   });
 
   // handling the toggle of the compose tweet bar
-  $("#write-tweet").on("click", function () {
+  $("#write-tweet").on("click", () => {
     if ($(".new-tweet:hidden").length) {
       $(".new-tweet").slideDown();
       $(".new-tweet").find("textarea").focus();
