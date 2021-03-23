@@ -1,7 +1,3 @@
-/* Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-// user database
-
 // escape function to prevent XSS attacks
 const escape = (str) => {
   let div = document.createElement("div");
@@ -51,13 +47,14 @@ const createTweetElement = (tweet) => {
         <i class="fa fa-flag">&#160</i>
         <i class="fa fa-retweet">&#160</i>
         <i class="fa fa-heart"></i>
-        </span>
+      </span>
     </p>                            
   </footer>
   `;
   $tweet.append(htmlCode);
   return $tweet;
 };
+
 // function that renders the tweets on the page
 const renderTweets = (tweets) => {
   for (let tweet of tweets) {
@@ -82,9 +79,11 @@ $(document).ready(() => {
     });
   };
   $("#error").hide();
+
+  // loading the tweets
   loadTweets();
 
-  //after loading the page, handling the submit function
+  // after loading the page, handling the submit function
   $("#submit").submit((event) => {
     noOfChars = $(this).find("textarea").val().length;
     if (noOfChars === 0) {
