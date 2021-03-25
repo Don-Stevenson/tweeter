@@ -7,7 +7,7 @@ $(document).ready(() => {
     const counter = $(this).closest(".new-tweet").find("#counter");
 
     // calling the change class colour based on remaining characters
-    changeClassColourByCharacter(remainingChar, counter);
+    changeClassColourByCharacterCount(remainingChar, counter);
 
     // updating the counter text to be the remaining characters left
     counter.text(remainingChar);
@@ -15,7 +15,7 @@ $(document).ready(() => {
 });
 
 // function that turns the colour of the counter text by the number of remaining characters
-const changeClassColourByCharacter = (remainingChar, counter) => {
+const changeClassColourByCharacterCount = (remainingChar, counter) => {
   if (remainingChar < 0) {
     counter.removeClass("changeCounterYellow");
     counter.addClass("changeCounterRed");
