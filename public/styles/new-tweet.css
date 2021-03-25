@@ -30,8 +30,12 @@
   float: right;
 }
 
-.changeCounterColor {
+.changeCounterRed {
   color: red;
+}
+
+.changeCounterYellow {
+  color: rgb(226, 166, 2);
 }
 
 #error{
